@@ -17,7 +17,7 @@ public class NotificationContent
     private String mFullyMessageText;
     private int mId;
 
-    NotificationContent(String title, String body, String tickerText)
+    public NotificationContent(String title, String body, String tickerText)
     {
         mTitle = title;
         mBody = body;

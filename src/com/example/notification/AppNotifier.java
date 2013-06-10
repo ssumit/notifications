@@ -26,8 +26,7 @@ public class AppNotifier implements IAppNotifier
         if (content != null)
         {
             NotificationCompat.Builder builder = this.mBuilder.getNotificationBuilder(content.getTitle(), content.getBody(), mustFireAndAlert)
-                    .setTicker(content.getTickerText())
-                    .setLargeIcon(content.getNotificationIcon());
+                    .setTicker(content.getTickerText()).setLargeIcon(content.getNotificationIcon());
 
             if (mMessageNotificationVisibleState || mustFireAndAlert)
             {
