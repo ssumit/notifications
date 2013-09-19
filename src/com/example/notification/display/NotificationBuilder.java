@@ -5,7 +5,6 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
-import com.example.notification.content.NotificationContent;
 import com.example.notification.store.IUserPrefStore;
 
 public class NotificationBuilder
@@ -47,22 +46,6 @@ public class NotificationBuilder
         }
 
         return builder;
-    }
-
-    public NotificationCompat.InboxStyle getInboxNotificationStyle(NotificationContent content)
-    {
-        NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
-        inboxStyle.setSummaryText(content.getSummaryText());
-        inboxStyle.setBigContentTitle(content.getTitle());
-        return inboxStyle;
-    }
-
-    public NotificationCompat.BigTextStyle getBigTextNotificationStyle(NotificationContent content)
-    {
-        NotificationCompat.BigTextStyle bigTextStyle = new NotificationCompat.BigTextStyle();
-        bigTextStyle.bigText(content.getFullMessageText());
-        bigTextStyle.setSummaryText(content.getSummaryText());
-        return bigTextStyle;
     }
 
     public boolean vibrateDevice(String vibratePref)

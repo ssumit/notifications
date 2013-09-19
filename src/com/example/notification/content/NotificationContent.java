@@ -16,6 +16,7 @@ public class NotificationContent
     private Bitmap mNotificationIcon;
     private String mFullyMessageText;
     private int mId;
+    private NotificationStyle mStyle;
 
     public NotificationContent(String title, String body, String tickerText)
     {
@@ -26,11 +27,17 @@ public class NotificationContent
         mSummaryText = "";
         mContentInfo=0;
         mId = UUID.randomUUID().hashCode();
+        mStyle = NotificationStyle.NORMAL;
     }
 
     public String getTitle()
     {
         return mTitle;
+    }
+
+    public NotificationStyle getStyle()
+    {
+        return mStyle;
     }
 
     public String getBody()
@@ -91,6 +98,11 @@ public class NotificationContent
     public void setFullMessageText(String value)
     {
         mFullyMessageText = value;
+    }
+
+    public void setStyle(NotificationStyle style)
+    {
+        mStyle = style;
     }
 
     public int getId()
