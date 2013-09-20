@@ -12,5 +12,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <receiver
+                android:name=".notification.NotificationBroadcastReceiver"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="retry_failed_message_broadcast"/>
+                <action android:name="accept_friend_request_broadcast"/>
+                <action android:name="reject_friend_request_broadcast"/>
+                <action android:name="message_notification_cancelled"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 </manifest>
