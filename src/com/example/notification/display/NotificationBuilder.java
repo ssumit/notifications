@@ -46,7 +46,17 @@ public class NotificationBuilder
         {
             setStyle();
         }
-        return build();
+        if (mContent.getIcon() != -1)
+        {
+            setSmallIcon();
+        }
+        if (mContent.getFullScreenIntent() != null)
+        {
+            setFullScreenIntent();
+        }
+        Notification notification = build();
+        clear();
+        return notification;
     }
 
     public NotificationBuilder startBuildingNotification(NotificationContent content)
@@ -120,10 +130,13 @@ public class NotificationBuilder
 
     public Notification build()
     {
-        Notification notification = mBuilder.build();
+        return mBuilder.build();
+    }
+
+    public void clear()
+    {
         mContent = null;
         mBuilder = null;
-        return notification;
     }
 
     public NotificationBuilder setStyle()
@@ -131,4 +144,23 @@ public class NotificationBuilder
         new StyleProcessor().setAndGetStyle(mContent);
         return this;
     }
+
+    public NotificationBuilder setDeleteContent()
+    {
+        mBuilder.setDeleteIntent(mContent.getDeleteIntent());
+        return this;
+    }
+
+    public NotificationBuilder setFullScreenIntent()
+    {
+        mBuilder.setFullScreenIntent(mContent.getFullScreenIntent(), mContent.isFullScreenPriorityHigh());
+        return this;
+    }
+
+    public NotificationBuilder setSmallIcon()
+    {
+        mBuilder.setSmallIcon(mContent.getIcon());
+        return this;
+    }
+
 }

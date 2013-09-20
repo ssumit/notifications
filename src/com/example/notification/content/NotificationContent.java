@@ -12,7 +12,6 @@ public class NotificationContent
     private String mBody;
     private String mTickerText;
     private String mSummaryText;
-    private int mContactId;
     private String mContentInfo;
     private Bitmap mNotificationIcon;
     private String mFullyMessageText;
@@ -21,6 +20,9 @@ public class NotificationContent
     private PendingIntent mContentPendingIntent;
     private PendingIntent mDeletePendingIntent;
     private NotificationAction mNotificationAction;
+    private PendingIntent mFullScreenIntent;
+    private boolean mFullScreenPriority;
+    private int mIcon;
 
     public NotificationContent(String title, String body, String tickerText)
     {
@@ -29,7 +31,7 @@ public class NotificationContent
         mFullyMessageText = body;
         mTickerText = new Utils().trimTickerText(tickerText);
         mSummaryText = "";
-        mContactId =0;
+        mIcon = -1;
         mId = UUID.randomUUID().hashCode();
         mStyle = NotificationStyle.NORMAL;
     }
@@ -59,11 +61,6 @@ public class NotificationContent
         return mSummaryText;
     }
 
-    public int getContactId()
-    {
-        return mContactId;
-    }
-
     public String getContentInfo()
     {
         return mContentInfo;
@@ -82,11 +79,6 @@ public class NotificationContent
     public void setSummaryText(String value)
     {
         mSummaryText = value;
-    }
-
-    public void setContentInfo(int value)
-    {
-        mContactId =value;
     }
 
     public void setContactId(String value)
@@ -143,4 +135,31 @@ public class NotificationContent
     {
         return mNotificationAction;
     }
+
+    public PendingIntent getFullScreenIntent()
+    {
+        return mFullScreenIntent;
+    }
+
+    public void setFullScreenIntentAndPriority(PendingIntent pendingIntent, boolean priority)
+    {
+        mFullScreenIntent = pendingIntent;
+        mFullScreenPriority = priority;
+    }
+
+    public boolean isFullScreenPriorityHigh()
+    {
+        return mFullScreenPriority;
+    }
+
+    public int getIcon()
+    {
+        return mIcon;
+    }
+
+    public void setIcon(int icon)
+    {
+        mIcon = icon;
+    }
+
 }
