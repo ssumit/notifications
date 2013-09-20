@@ -1,5 +1,6 @@
 package com.example.notification.content;
 
+import android.app.PendingIntent;
 import android.graphics.Bitmap;
 import com.example.util.Utils;
 
@@ -11,12 +12,15 @@ public class NotificationContent
     private String mBody;
     private String mTickerText;
     private String mSummaryText;
-    private int mContentInfo;
-    private String mContactId;
+    private int mContactId;
+    private String mContentInfo;
     private Bitmap mNotificationIcon;
     private String mFullyMessageText;
     private int mId;
     private NotificationStyle mStyle;
+    private PendingIntent mContentPendingIntent;
+    private PendingIntent mDeletePendingIntent;
+    private NotificationAction mNotificationAction;
 
     public NotificationContent(String title, String body, String tickerText)
     {
@@ -25,7 +29,7 @@ public class NotificationContent
         mFullyMessageText = body;
         mTickerText = new Utils().trimTickerText(tickerText);
         mSummaryText = "";
-        mContentInfo=0;
+        mContactId =0;
         mId = UUID.randomUUID().hashCode();
         mStyle = NotificationStyle.NORMAL;
     }
@@ -55,12 +59,12 @@ public class NotificationContent
         return mSummaryText;
     }
 
-    public String getContactId()
+    public int getContactId()
     {
         return mContactId;
     }
 
-    public int getContentInfo()
+    public String getContentInfo()
     {
         return mContentInfo;
     }
@@ -82,12 +86,12 @@ public class NotificationContent
 
     public void setContentInfo(int value)
     {
-        mContentInfo =value;
+        mContactId =value;
     }
 
     public void setContactId(String value)
     {
-        mContactId =value;
+        mContentInfo =value;
     }
 
     public void setNotificationIcon(Bitmap value)
@@ -108,5 +112,35 @@ public class NotificationContent
     public int getId()
     {
         return mId;
+    }
+
+    public void setContentIntent(PendingIntent pendingIntent)
+    {
+        mContentPendingIntent = pendingIntent;
+    }
+
+    public PendingIntent getContentIntent()
+    {
+        return mContentPendingIntent;
+    }
+
+    public void setDeleteIntent(PendingIntent pendingIntent)
+    {
+        mDeletePendingIntent = pendingIntent;
+    }
+
+    public PendingIntent getDeleteIntent()
+    {
+        return mDeletePendingIntent;
+    }
+
+    public void setNotificationAction(NotificationAction action)
+    {
+        mNotificationAction = action;
+    }
+
+    public NotificationAction getNotificationAction()
+    {
+        return mNotificationAction;
     }
 }

@@ -5,12 +5,16 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
+import com.example.notification.content.NotificationContent;
+import com.example.notification.content.StyleProcessor;
 import com.example.notification.store.IUserPrefStore;
 
 public class NotificationBuilder
 {
     private IUserPrefStore mUserPrefStore;
     private Context mContext;
+    private NotificationCompat.Builder mBuilder;
+    private NotificationContent mContent;
 
     public NotificationBuilder(Context context, IUserPrefStore userPrefStore)
     {
@@ -18,34 +22,63 @@ public class NotificationBuilder
         mUserPrefStore = userPrefStore;
     }
 
-    public NotificationCompat.Builder getNotificationBuilder(String title, String body, boolean alertFlag)
+    public Notification buildNotification(NotificationContent content)
     {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext)
-                .setContentTitle(title)
-                .setContentText(body)
+        startBuildingNotification(content);
+        setAlertSettings();
+        if (content.getTickerText() != null)
+        {
+            setTickerText();
+        }
+        if (mContent.getNotificationIcon() != null)
+        {
+            setLargeIcon();
+        }
+        if (mContent.getContentInfo() != null)
+        {
+            setContentInfo();
+        }
+        if (mContent.getContentIntent() != null)
+        {
+            setContentIntent();
+        }
+        if (mContent.getStyle() != null)
+        {
+            setStyle();
+        }
+        return build();
+    }
+
+    public NotificationBuilder startBuildingNotification(NotificationContent content)
+    {
+        mContent = content;
+        mBuilder = new NotificationCompat.Builder(mContext)
+                .setContentTitle(mContent.getTitle())
+                .setContentText(mContent.getBody())
                 .setSmallIcon(1)
                 .setAutoCancel(true);
 
-        if (alertFlag)
+        return this;
+    }
+
+    //todo : make alert setting more generic
+    public NotificationBuilder setAlertSettings()
+    {
+        mBuilder.setLights(0xFF0000FF, 100, 3000);
+        mBuilder.setPriority(Notification.PRIORITY_DEFAULT);
+
+        String ringToneUri = mUserPrefStore.getSoundPreference();
+
+        if (ringToneUri != null)
         {
-            builder.setTicker(body);
-            builder.setLights(0xFF0000FF, 100, 3000);
-            builder.setPriority(Notification.PRIORITY_DEFAULT);
-
-            String ringToneUri = mUserPrefStore.getSoundPreference();
-
-            if (ringToneUri != null)
-            {
-                builder.setSound(Uri.parse(ringToneUri));
-            }
-
-            if (vibrateDevice(mUserPrefStore.getVibratePreference()))
-            {
-                builder.setVibrate(new long[]{0, 500, 200, 300, 200, 100});
-            }
+            mBuilder.setSound(Uri.parse(ringToneUri));
         }
 
-        return builder;
+        if (vibrateDevice(mUserPrefStore.getVibratePreference()))
+        {
+            mBuilder.setVibrate(new long[]{0, 500, 200, 300, 200, 100});
+        }
+        return this;
     }
 
     public boolean vibrateDevice(String vibratePref)
@@ -61,4 +94,41 @@ public class NotificationBuilder
         }
     }
 
+    public NotificationBuilder setTickerText()
+    {
+        mBuilder.setTicker(mContent.getBody());
+        return this;
+    }
+
+    public NotificationBuilder setLargeIcon()
+    {
+        mBuilder.setLargeIcon(mContent.getNotificationIcon());
+        return this;
+    }
+
+    public NotificationBuilder setContentInfo()
+    {
+        mBuilder.setContentInfo(mContent.getContentInfo());
+        return this;
+    }
+
+    public NotificationBuilder setContentIntent()
+    {
+        mBuilder.setContentIntent(mContent.getContentIntent());
+        return this;
+    }
+
+    public Notification build()
+    {
+        Notification notification = mBuilder.build();
+        mContent = null;
+        mBuilder = null;
+        return notification;
+    }
+
+    public NotificationBuilder setStyle()
+    {
+        new StyleProcessor().setAndGetStyle(mContent);
+        return this;
+    }
 }
