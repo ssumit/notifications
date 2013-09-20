@@ -14,4 +14,19 @@ public class NotificationAction
         mTitle = title;
         mPendingIntent = pendingIntent;
     }
+
+    public int getIcon()
+    {
+        return mIcon;
+    }
+
+    public String getTitle()
+    {
+        return mTitle;
+    }
+
+    public PendingIntent getPendingIntent()
+    {
+        return mPendingIntent;
+    }
 }

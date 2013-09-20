@@ -5,8 +5,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
-import com.example.notification.content.NotificationContent;
-import com.example.notification.content.StyleProcessor;
+import com.example.notification.content.*;
 import com.example.notification.store.IUserPrefStore;
 
 public class NotificationBuilder
@@ -26,6 +25,10 @@ public class NotificationBuilder
     {
         startBuildingNotification(content);
         setAlertSettings();
+        if (content.getNotificationAction() != null)
+        {
+            addAction();
+        }
         if (content.getTickerText() != null)
         {
             setTickerText();
@@ -66,42 +69,36 @@ public class NotificationBuilder
                 .setContentTitle(mContent.getTitle())
                 .setContentText(mContent.getBody())
                 .setSmallIcon(1)
-                .setAutoCancel(true);
+                .setAutoCancel(true)
+                .setPriority(Notification.PRIORITY_DEFAULT);
 
         return this;
     }
 
-    //todo : make alert setting more generic
     public NotificationBuilder setAlertSettings()
     {
-        mBuilder.setLights(0xFF0000FF, 100, 3000);
-        mBuilder.setPriority(Notification.PRIORITY_DEFAULT);
-
-        String ringToneUri = mUserPrefStore.getSoundPreference();
-
-        if (ringToneUri != null)
+        AudioManager audioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+        AlertPreference alertPreference = mContent.getAlertPreference();
+        mBuilder.setOnlyAlertOnce(alertPreference.isAlertOnce());
+        LightPreference lightPreference = alertPreference.getLightPreference();
+        mBuilder.setLights(lightPreference.getArgb(), lightPreference.getOnMs(), lightPreference.getOffMs());
+        if (alertPreference.shouldSound(audioManager))
         {
-            mBuilder.setSound(Uri.parse(ringToneUri));
+            String soundPref = alertPreference.getSoundPref();
+            mBuilder.setSound(Uri.parse(soundPref));
         }
-
-        if (vibrateDevice(mUserPrefStore.getVibratePreference()))
+        if (alertPreference.shouldVibrate(audioManager))
         {
-            mBuilder.setVibrate(new long[]{0, 500, 200, 300, 200, 100});
+            mBuilder.setVibrate(alertPreference.getVibratePattern());
         }
         return this;
     }
 
-    public boolean vibrateDevice(String vibratePref)
+    public NotificationBuilder addAction()
     {
-        AudioManager audioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
-        if (audioManager.getRingerMode() == AudioManager.RINGER_MODE_SILENT)
-        {
-            return false;
-        }
-        else
-        {
-            return (vibratePref != null); //add vibrate off condition
-        }
+        NotificationAction action = mContent.getNotificationAction();
+        mBuilder.addAction(action.getIcon(), action.getTitle(), action.getPendingIntent());
+        return this;
     }
 
     public NotificationBuilder setTickerText()

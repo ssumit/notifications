@@ -23,6 +23,7 @@ public class NotificationContent
     private PendingIntent mFullScreenIntent;
     private boolean mFullScreenPriority;
     private int mIcon;
+    private AlertPreference mAlertPreference;
 
     public NotificationContent(String title, String body, String tickerText)
     {
@@ -34,6 +35,7 @@ public class NotificationContent
         mIcon = -1;
         mId = UUID.randomUUID().hashCode();
         mStyle = NotificationStyle.NORMAL;
+        mAlertPreference = new AlertPreference();
     }
 
     public String getTitle()
@@ -160,6 +162,16 @@ public class NotificationContent
     public void setIcon(int icon)
     {
         mIcon = icon;
+    }
+
+    public void setAlertPreference(AlertPreference alertPreference)
+    {
+        mAlertPreference = alertPreference;
+    }
+
+    public AlertPreference getAlertPreference()
+    {
+        return mAlertPreference;
     }
 
 }
