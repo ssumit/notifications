@@ -17,12 +17,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfce891c-2478-4e1a-b743-5edcdbdd6e28" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/executors/EventLimiter.java" afterPath="$PROJECT_DIR$/src/com/java/executors/Throttler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/display/NotificationBuilder.java" afterPath="$PROJECT_DIR$/src/com/java/notification/builder/NotificationBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java" afterPath="$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java" afterPath="$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/notification/AppNotifier.java" afterPath="$PROJECT_DIR$/src/com/java/notification/AppNotifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/notification/IAppNotifier.java" afterPath="$PROJECT_DIR$/src/com/java/notification/IAppNotifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/open/java/notification/Constants.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/java/executors/CustomExecutorService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/java/executors/ThreadFactoryWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/java/executors/Throttler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/java/notification/Constants.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java" afterPath="$PROJECT_DIR$/src/open/java/example/SimpleNotificationExampleActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/AppNotifier.java" afterPath="$PROJECT_DIR$/src/open/java/notification/AppNotifier.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/IAppNotifier.java" afterPath="$PROJECT_DIR$/src/open/java/notification/IAppNotifier.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/NotificationBroadcastReceiver.java" afterPath="$PROJECT_DIR$/src/open/java/notification/NotificationBroadcastReceiver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/StorageFactory.java" afterPath="$PROJECT_DIR$/src/open/java/notification/StorageFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/builder/NotificationBuilder.java" afterPath="$PROJECT_DIR$/src/open/java/notification/builder/NotificationBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/content/AlertPreference.java" afterPath="$PROJECT_DIR$/src/open/java/notification/content/AlertPreference.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/content/LightPreference.java" afterPath="$PROJECT_DIR$/src/open/java/notification/content/LightPreference.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/content/NotificationAction.java" afterPath="$PROJECT_DIR$/src/open/java/notification/content/NotificationAction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/content/NotificationContent.java" afterPath="$PROJECT_DIR$/src/open/java/notification/content/NotificationContent.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/content/NotificationStyle.java" afterPath="$PROJECT_DIR$/src/open/java/notification/content/NotificationStyle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/content/StyleProcessor.java" afterPath="$PROJECT_DIR$/src/open/java/notification/content/StyleProcessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/store/INotificationStore.java" afterPath="$PROJECT_DIR$/src/open/java/notification/store/INotificationStore.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/store/IUserPrefStore.java" afterPath="$PROJECT_DIR$/src/open/java/notification/store/IUserPrefStore.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/store/NotificationStore.java" afterPath="$PROJECT_DIR$/src/open/java/notification/store/NotificationStore.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/store/StoreKeys.java" afterPath="$PROJECT_DIR$/src/open/java/notification/store/StoreKeys.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/store/UserPrefStore.java" afterPath="$PROJECT_DIR$/src/open/java/notification/store/UserPrefStore.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/util/Utils.java" afterPath="$PROJECT_DIR$/src/open/java/util/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="notifications.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,45 +102,45 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="NotificationBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/builder/NotificationBuilder.java">
+        <entry file="file://$PROJECT_DIR$/src/open/java/notification/builder/NotificationBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="0" selection-start="4236" selection-end="4236" vertical-scroll-proportion="0.0">
+            <state line="152" column="0" selection-start="4238" selection-end="4238" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="StyleProcessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/StyleProcessor.java">
+        <entry file="file://$PROJECT_DIR$/src/open/java/notification/content/StyleProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+            <state line="4" column="13" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CustomExecutorService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/executors/CustomExecutorService.java">
+        <entry file="file://$PROJECT_DIR$/src/open/java/executors/CustomExecutorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="41" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
+            <state line="38" column="41" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CustomFutureTask.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java">
+        <entry file="file://$PROJECT_DIR$/src/open/java/executors/CustomFutureTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
+            <state line="38" column="0" selection-start="838" selection-end="838" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Throttler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/executors/Throttler.java">
+        <entry file="file://$PROJECT_DIR$/src/open/java/executors/Throttler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
+            <state line="36" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,45 +149,36 @@
         </entry>
       </file>
       <file leaf-file-name="ThreadFactoryWrapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/executors/ThreadFactoryWrapper.java">
+        <entry file="file://$PROJECT_DIR$/src/open/java/executors/ThreadFactoryWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
+            <state line="4" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/util/Utils.java">
+        <entry file="file://$PROJECT_DIR$/src/open/java/util/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+            <state line="2" column="13" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/StorageFactory.java">
+      <file leaf-file-name="NotificationStore.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/open/java/notification/store/NotificationStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotificationStore.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/NotificationStore.java">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.08964144">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserPrefStore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/UserPrefStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="48" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+            <state line="9" column="42" selection-start="435" selection-end="435" vertical-scroll-proportion="0.40059346">
               <folding />
             </state>
           </provider>
@@ -185,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/notification/content/AlertPreference.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/content/LightPreference.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/display/NotificationBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/AppNotifier.java" />
@@ -201,6 +212,7 @@
         <option value="$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java" />
         <option value="$PROJECT_DIR$/src/com/java/executors/EventLimiter.java" />
         <option value="$PROJECT_DIR$/src/com/java/executors/Throttler.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -270,54 +282,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notifications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notifications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notifications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notifications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -420,7 +384,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/com/example" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
@@ -446,11 +410,11 @@
       <recent name="com.example.notification.store" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="open.java" />
       <recent name="com.java.example" />
       <recent name="com.example" />
       <recent name="com.example.notification.content" />
       <recent name="com.example.notification.display" />
-      <recent name="com.example.notification" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.notifications">
@@ -696,7 +660,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3263158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -813,112 +777,105 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/NotificationContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="4" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="42" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/AppNotifier.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/AppNotifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="21" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/IAppNotifier.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/IAppNotifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="17" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/NotificationBroadcastReceiver.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/NotificationBroadcastReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/StorageFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/StorageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="13" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/UserPrefStore.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/store/UserPrefStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="48" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/builder/NotificationBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/builder/NotificationBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="0" selection-start="4236" selection-end="4236" vertical-scroll-proportion="0.0">
+        <state line="152" column="0" selection-start="4238" selection-end="4238" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/StyleProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/content/StyleProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+        <state line="4" column="13" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/util/Utils.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/util/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+        <state line="2" column="13" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/executors/CustomExecutorService.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/executors/CustomExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="41" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
+        <state line="38" column="41" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/executors/CustomFutureTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
+        <state line="38" column="0" selection-start="838" selection-end="838" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/executors/Throttler.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/executors/Throttler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
+        <state line="36" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/executors/ThreadFactoryWrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/executors/ThreadFactoryWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
+        <state line="4" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/NotificationStore.java">
+    <entry file="file://$PROJECT_DIR$/src/open/java/notification/store/NotificationStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.08964144">
+        <state line="10" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="42" selection-start="435" selection-end="435" vertical-scroll-proportion="0.40059346">
           <folding />
         </state>
       </provider>
