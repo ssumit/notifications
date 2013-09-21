@@ -25,14 +25,14 @@ public class NotificationContent
     private int mIcon;
     private AlertPreference mAlertPreference;
 
-    public NotificationContent(String title, String body, String tickerText)
+    public NotificationContent(String title, String body, String tickerText, int icon)
     {
         mTitle = title;
         mBody = body;
         mFullyMessageText = body;
         mTickerText = new Utils().trimTickerText(tickerText);
         mSummaryText = "";
-        mIcon = -1;
+        mIcon = icon;
         mId = UUID.randomUUID().hashCode();
         mStyle = NotificationStyle.NORMAL;
         mAlertPreference = new AlertPreference();
