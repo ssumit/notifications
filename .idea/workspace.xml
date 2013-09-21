@@ -17,7 +17,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfce891c-2478-4e1a-b743-5edcdbdd6e28" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/executors/EventLimiter.java" afterPath="$PROJECT_DIR$/src/com/java/executors/Throttler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/java/notification/display/NotificationBuilder.java" afterPath="$PROJECT_DIR$/src/com/java/notification/builder/NotificationBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java" afterPath="$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java" afterPath="$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/notification/AppNotifier.java" afterPath="$PROJECT_DIR$/src/com/java/notification/AppNotifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/notification/IAppNotifier.java" afterPath="$PROJECT_DIR$/src/com/java/notification/IAppNotifier.java" />
     </list>
     <ignored path="notifications.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,37 +80,84 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NotificationContent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/NotificationContent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="20" selection-start="1437" selection-end="1437" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppNotifier.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/AppNotifier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="30" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NotificationBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/display/NotificationBuilder.java">
+        <entry file="file://$PROJECT_DIR$/src/com/java/notification/builder/NotificationBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="17" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+            <state line="152" column="0" selection-start="4236" selection-end="4236" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleNotificationExampleActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java">
+      <file leaf-file-name="StyleProcessor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/StyleProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.81595093">
+            <state line="4" column="13" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomExecutorService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/executors/CustomExecutorService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="41" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomFutureTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="0" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Throttler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/executors/Throttler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadFactoryWrapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/executors/ThreadFactoryWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/util/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/notification/StorageFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotificationStore.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/NotificationStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.08964144">
               <folding />
             </state>
           </provider>
@@ -115,42 +167,6 @@
         <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/UserPrefStore.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="14" column="48" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotificationStore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/NotificationStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="61" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotificationBroadcastReceiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/notification/NotificationBroadcastReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,9 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/notification/content/NotificationAction.java" />
-        <option value="$PROJECT_DIR$/src/com/example/notification/content/LightPref.java" />
-        <option value="$PROJECT_DIR$/src/com/example/notification/content/NotificationContent.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/content/AlertPreference.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/content/LightPreference.java" />
         <option value="$PROJECT_DIR$/src/com/example/notification/display/NotificationBuilder.java" />
@@ -182,9 +195,12 @@
         <option value="$PROJECT_DIR$/src/com/java/notification/content/AlertPreference.java" />
         <option value="$PROJECT_DIR$/src/com/java/notification/content/StyleProcessor.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/java/notification/AppNotifier.java" />
-        <option value="$PROJECT_DIR$/src/com/java/notification/content/NotificationContent.java" />
         <option value="$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/java/notification/content/NotificationContent.java" />
+        <option value="$PROJECT_DIR$/src/com/java/notification/AppNotifier.java" />
+        <option value="$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java" />
+        <option value="$PROJECT_DIR$/src/com/java/executors/EventLimiter.java" />
+        <option value="$PROJECT_DIR$/src/com/java/executors/Throttler.java" />
       </list>
     </option>
   </component>
@@ -275,7 +291,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
+              <option name="myItemId" value="notification" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notifications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notifications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notification" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -771,59 +813,39 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/NotificationCompat.class">
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/NotificationContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="33" selection-start="3488" selection-end="3488" vertical-scroll-proportion="-13.84" />
+        <state line="159" column="4" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/StyleProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="12" selection-start="938" selection-end="938" vertical-scroll-proportion="0.43141592" />
+        <state line="39" column="42" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/AppNotifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="21" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/AlertPreference.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/IAppNotifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" />
+        <state line="4" column="17" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/LightPreference.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="3" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/android-sdk-linux/platforms/android-17/android.jar!/java/util/UUID.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="15" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/android-sdk-linux/platforms/android-17/android.jar!/android/os/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="3526" selection-end="3526" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/UserPrefStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="48" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/NotificationStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="61" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" />
+        <state line="2" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/notification/NotificationBroadcastReceiver.java">
@@ -831,30 +853,72 @@
         <state line="6" column="13" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/AppNotifier.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/StorageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="30" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
+        <state line="7" column="13" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/display/NotificationBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/UserPrefStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="17" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+        <state line="14" column="48" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/builder/NotificationBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="0" selection-start="4236" selection-end="4236" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/NotificationContent.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/content/StyleProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="20" selection-start="1437" selection-end="1437" vertical-scroll-proportion="0.0">
+        <state line="4" column="13" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/example/SimpleNotificationExampleActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/java/util/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.81595093">
+        <state line="2" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/executors/CustomExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="41" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/executors/CustomFutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/executors/Throttler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/executors/ThreadFactoryWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/notification/store/NotificationStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.08964144">
           <folding />
         </state>
       </provider>

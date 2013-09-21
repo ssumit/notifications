@@ -34,12 +34,10 @@ public class SimpleNotificationExampleActivity extends Activity {
     private void showNotification()
     {
         NotificationContent notificationContent = new NotificationContent(mTitle, mBody, mTickerText, R.drawable.accounts_cross);
-
-        notificationContent.setIcon(R.drawable.accounts_cross);
-        notificationContent.setNotificationIcon(((BitmapDrawable)getResources().getDrawable(R.drawable.accounts_cross)).getBitmap());
+        notificationContent.setLargeIcon(((BitmapDrawable) getResources().getDrawable(R.drawable.accounts_cross)).getBitmap());
         IUserPrefStore userPrefStore = new StorageFactory().getUserPrefStore();
         notificationContent.setAlertPreference(new AlertPreference(userPrefStore.getSoundPreference(), userPrefStore.getVibratePreference()));
         AppNotifier appNotifier = new AppNotifier(getApplicationContext());
-        appNotifier.generateMessageNotification(notificationContent);
+        appNotifier.generateNotification(notificationContent);
     }
 }

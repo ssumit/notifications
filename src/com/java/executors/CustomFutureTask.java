@@ -32,9 +32,8 @@ public class CustomFutureTask extends FutureTask<Object>
             });
             thread.start();
         }
-        catch (InterruptedException e)
+        catch (InterruptedException ignored)
         {
-            //ignored
         }
     }
 }

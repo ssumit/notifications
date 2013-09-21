@@ -23,9 +23,9 @@ public class StyleProcessor
             {
                 bigPictureStyle.setSummaryText(content.getSummaryText());
             }
-            if (content.getNotificationIcon() != null)
+            if (content.getLargeIcon() != null)
             {
-                bigPictureStyle.bigPicture(content.getNotificationIcon());
+                bigPictureStyle.bigPicture(content.getLargeIcon());
             }
             return bigPictureStyle;
         }

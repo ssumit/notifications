@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-public class EventLimiter
+public class Throttler
 {
     private long mFiringRate;
     private long mScheduledTime;
@@ -12,7 +12,7 @@ public class EventLimiter
     private CustomExecutorService mCustomExecutorService;
     private Runnable mRunnable;
 
-    public EventLimiter(long firingRate, Runnable runnable)
+    public Throttler(long firingRate, Runnable runnable)
     {
         mFiringRate = firingRate;
         mRunnable = runnable;

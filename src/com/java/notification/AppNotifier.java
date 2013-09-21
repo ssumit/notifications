@@ -3,7 +3,7 @@ package com.java.notification;
 import android.app.NotificationManager;
 import android.content.Context;
 import com.java.notification.content.NotificationContent;
-import com.java.notification.display.NotificationBuilder;
+import com.java.notification.builder.NotificationBuilder;
 
 public class AppNotifier implements IAppNotifier
 {
@@ -18,7 +18,8 @@ public class AppNotifier implements IAppNotifier
         mNotificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
     }
 
-    public void generateMessageNotification(NotificationContent content)
+    @Override
+    public void generateNotification(NotificationContent content)
     {
         if (content != null)
         {
@@ -26,7 +27,8 @@ public class AppNotifier implements IAppNotifier
         }
     }
 
-    public void removeMessageNotification(int id)
+    @Override
+    public void removeNotification(int id)
     {
         mNotificationManager.cancel(id);
     }

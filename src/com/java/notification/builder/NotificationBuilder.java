@@ -1,4 +1,4 @@
-package com.java.notification.display;
+package com.java.notification.builder;
 
 import android.app.Notification;
 import android.content.Context;
@@ -30,7 +30,7 @@ public class NotificationBuilder
         {
             setTickerText();
         }
-        if (mContent.getNotificationIcon() != null)
+        if (mContent.getLargeIcon() != null)
         {
             setLargeIcon();
         }
@@ -106,7 +106,7 @@ public class NotificationBuilder
 
     public NotificationBuilder setLargeIcon()
     {
-        mBuilder.setLargeIcon(mContent.getNotificationIcon());
+        mBuilder.setLargeIcon(mContent.getLargeIcon());
         return this;
     }
 

@@ -13,7 +13,7 @@ public class NotificationContent
     private String mTickerText;
     private String mSummaryText;
     private String mContentInfo;
-    private Bitmap mNotificationIcon;
+    private Bitmap mLargeIcon;
     private String mFullyMessageText;
     private int mId;
     private NotificationStyle mStyle;
@@ -68,9 +68,9 @@ public class NotificationContent
         return mContentInfo;
     }
 
-    public Bitmap getNotificationIcon()
+    public Bitmap getLargeIcon()
     {
-        return mNotificationIcon;
+        return mLargeIcon;
     }
 
     public String getFullMessageText()
@@ -88,9 +88,9 @@ public class NotificationContent
         mContentInfo =value;
     }
 
-    public void setNotificationIcon(Bitmap value)
+    public void setLargeIcon(Bitmap value)
     {
-        mNotificationIcon = value;
+        mLargeIcon = value;
     }
 
     public void setFullMessageText(String value)
