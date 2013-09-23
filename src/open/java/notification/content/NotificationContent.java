@@ -78,29 +78,34 @@ public class NotificationContent
         return mFullyMessageText;
     }
 
-    public void setSummaryText(String value)
+    public NotificationContent setSummaryText(String value)
     {
         mSummaryText = value;
+        return this;
     }
 
-    public void setContactId(String value)
+    public NotificationContent setContactInfo(String value)
     {
         mContentInfo =value;
+        return this;
     }
 
-    public void setLargeIcon(Bitmap value)
+    public NotificationContent setLargeIcon(Bitmap value)
     {
         mLargeIcon = value;
+        return this;
     }
 
-    public void setFullMessageText(String value)
+    public NotificationContent setFullMessageText(String value)
     {
         mFullyMessageText = value;
+        return this;
     }
 
-    public void setStyle(NotificationStyle style)
+    public NotificationContent setStyle(NotificationStyle style)
     {
         mStyle = style;
+        return this;
     }
 
     public int getId()
@@ -108,9 +113,10 @@ public class NotificationContent
         return mId;
     }
 
-    public void setContentIntent(PendingIntent pendingIntent)
+    public NotificationContent setContentIntent(PendingIntent pendingIntent)
     {
         mContentPendingIntent = pendingIntent;
+        return this;
     }
 
     public PendingIntent getContentIntent()
@@ -118,9 +124,10 @@ public class NotificationContent
         return mContentPendingIntent;
     }
 
-    public void setDeleteIntent(PendingIntent pendingIntent)
+    public NotificationContent setDeleteIntent(PendingIntent pendingIntent)
     {
         mDeletePendingIntent = pendingIntent;
+        return this;
     }
 
     public PendingIntent getDeleteIntent()
@@ -128,9 +135,10 @@ public class NotificationContent
         return mDeletePendingIntent;
     }
 
-    public void setNotificationAction(NotificationAction action)
+    public NotificationContent setNotificationAction(NotificationAction action)
     {
         mNotificationAction = action;
+        return this;
     }
 
     public NotificationAction getNotificationAction()
@@ -143,10 +151,11 @@ public class NotificationContent
         return mFullScreenIntent;
     }
 
-    public void setFullScreenIntentAndPriority(PendingIntent pendingIntent, boolean priority)
+    public NotificationContent setFullScreenIntentAndPriority(PendingIntent pendingIntent, boolean priority)
     {
         mFullScreenIntent = pendingIntent;
         mFullScreenPriority = priority;
+        return this;
     }
 
     public boolean isFullScreenPriorityHigh()
@@ -159,14 +168,16 @@ public class NotificationContent
         return mIcon;
     }
 
-    public void setIcon(int icon)
+    public NotificationContent setIcon(int icon)
     {
         mIcon = icon;
+        return this;
     }
 
-    public void setAlertPreference(AlertPreference alertPreference)
+    public NotificationContent setAlertPreference(AlertPreference alertPreference)
     {
         mAlertPreference = alertPreference;
+        return this;
     }
 
     public AlertPreference getAlertPreference()
