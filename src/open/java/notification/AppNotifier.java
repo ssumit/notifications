@@ -28,8 +28,14 @@ public class AppNotifier implements IAppNotifier
     }
 
     @Override
-    public void removeNotification(int id)
+    public void cancelNotification(int id)
     {
         mNotificationManager.cancel(id);
+    }
+
+    @Override
+    public void cancelAll()
+    {
+        mNotificationManager.cancelAll();
     }
 }

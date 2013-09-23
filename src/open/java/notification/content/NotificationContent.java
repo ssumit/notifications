@@ -1,5 +1,6 @@
 package open.java.notification.content;
 
+import android.app.Notification;
 import android.app.PendingIntent;
 import android.graphics.Bitmap;
 import open.java.util.Utils;
@@ -24,6 +25,8 @@ public class NotificationContent
     private boolean mFullScreenPriority;
     private int mIcon;
     private AlertPreference mAlertPreference;
+    private boolean mAutoCancel;
+    private int mPriority;
 
     public NotificationContent(String title, String body, String tickerText, int icon)
     {
@@ -36,6 +39,19 @@ public class NotificationContent
         mId = UUID.randomUUID().hashCode();
         mStyle = NotificationStyle.NORMAL;
         mAlertPreference = new AlertPreference();
+        mAutoCancel = true;
+        mPriority = Notification.PRIORITY_DEFAULT;
+    }
+
+    public boolean getAutoCancel()
+    {
+        return mAutoCancel;
+    }
+
+    public NotificationContent setAutoCancel(boolean autoCancel)
+    {
+        mAutoCancel = autoCancel;
+        return this;
     }
 
     public String getTitle()
@@ -105,6 +121,12 @@ public class NotificationContent
     public NotificationContent setStyle(NotificationStyle style)
     {
         mStyle = style;
+        return this;
+    }
+
+    public NotificationContent setId(int id)
+    {
+        mId = id;
         return this;
     }
 
@@ -183,5 +205,33 @@ public class NotificationContent
     public AlertPreference getAlertPreference()
     {
         return mAlertPreference;
+    }
+
+    public int getPriority()
+    {
+        return mPriority;
+    }
+
+    public NotificationContent setPriority(NotificationPriority priority)
+    {
+        switch (priority)
+        {
+            case PRIORITY_DEFAULT:
+                mPriority = Notification.PRIORITY_DEFAULT;
+                break;
+            case PRIORITY_HIGH:
+                mPriority = Notification.PRIORITY_HIGH;
+                break;
+            case PRIORITY_LOW:
+                mPriority = Notification.PRIORITY_LOW;
+                break;
+            case PRIORITY_MAX:
+                mPriority = Notification.PRIORITY_MAX;
+                break;
+            case PRIORITY_MIN:
+                mPriority = Notification.PRIORITY_MIN;
+                break;
+        }
+        return this;
     }
 }

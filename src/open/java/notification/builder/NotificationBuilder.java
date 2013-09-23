@@ -65,9 +65,9 @@ public class NotificationBuilder
         mBuilder = new NotificationCompat.Builder(mContext)
                 .setContentTitle(mContent.getTitle())
                 .setContentText(mContent.getBody())
-                .setSmallIcon(1)
-                .setAutoCancel(true)
-                .setPriority(Notification.PRIORITY_DEFAULT);
+                .setAutoCancel(mContent.getAutoCancel())
+                .setPriority(mContent.getPriority())
+                .setSmallIcon(mContent.getIcon());
 
         return this;
     }
@@ -101,6 +101,12 @@ public class NotificationBuilder
     public NotificationBuilder setTickerText()
     {
         mBuilder.setTicker(mContent.getBody());
+        return this;
+    }
+
+    public NotificationBuilder setPriority()
+    {
+        mBuilder.setPriority(mContent.getPriority());
         return this;
     }
 

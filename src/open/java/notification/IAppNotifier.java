@@ -6,5 +6,7 @@ public interface IAppNotifier
 {
     void generateNotification(NotificationContent content);
 
-    void removeNotification(int id);
+    void cancelNotification(int id);
+
+    void cancelAll();
 }
