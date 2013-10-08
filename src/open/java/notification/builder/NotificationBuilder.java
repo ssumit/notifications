@@ -2,7 +2,6 @@ package open.java.notification.builder;
 
 import android.app.Notification;
 import android.content.Context;
-import android.media.AudioManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import open.java.notification.content.NotificationAction;
@@ -83,20 +82,12 @@ public class NotificationBuilder
 
     public NotificationBuilder setAlertSettings()
     {
-        AudioManager audioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
         AlertPreference alertPreference = mContent.getAlertPreference();
-        mBuilder.setOnlyAlertOnce(alertPreference.isAlertOnce());
         LightPreference lightPreference = alertPreference.getLightPreference();
         mBuilder.setLights(lightPreference.getArgb(), lightPreference.getOnMs(), lightPreference.getOffMs());
-        if (alertPreference.shouldSound(audioManager))
-        {
-            String soundPref = alertPreference.getSoundPref();
-            mBuilder.setSound(Uri.parse(soundPref));
-        }
-        if (alertPreference.shouldVibrate(audioManager))
-        {
-            mBuilder.setVibrate(alertPreference.getVibratePattern());
-        }
+        Uri uri = alertPreference.getSoundUri();
+        mBuilder.setSound(uri);
+        mBuilder.setVibrate(alertPreference.getVibratePattern());
         return this;
     }
 
@@ -172,5 +163,4 @@ public class NotificationBuilder
         mBuilder.setSmallIcon(mContent.getIcon());
         return this;
     }
-
 }

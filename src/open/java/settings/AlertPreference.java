@@ -1,36 +1,23 @@
 package open.java.settings;
 
-import android.media.AudioManager;
+import android.net.Uri;
 
 public class AlertPreference
 {
-    private String mSoundPreference;
+    private Uri mSoundUri;
     private LightPreference mLightPreference;
-    private String mVibratePreference;
-    private boolean mAlertOnce;
     private long[] mVibratePattern;
 
     public AlertPreference()
     {
-        this(null, null);
+        this(null);
     }
 
-    public AlertPreference(String soundPreference, String vibratePreference)
+    public AlertPreference(Uri soundPreference)
     {
         mLightPreference = new LightPreference();
-        mSoundPreference = soundPreference;
-        mVibratePreference = vibratePreference;
+        mSoundUri = soundPreference;
         mVibratePattern = new long[]{0, 500, 200, 300, 200, 100};
-    }
-
-    public boolean shouldVibrate(AudioManager audioManager)
-    {
-        return audioManager.getRingerMode() != AudioManager.RINGER_MODE_SILENT && (mVibratePreference != null);
-    }
-
-    public boolean shouldSound(AudioManager audioManager)
-    {
-        return audioManager.getRingerMode() == AudioManager.RINGER_MODE_NORMAL && (mSoundPreference != null);
     }
 
     public LightPreference getLightPreference()
@@ -38,19 +25,14 @@ public class AlertPreference
         return mLightPreference;
     }
 
-    public boolean isAlertOnce()
+    public Uri getSoundUri()
     {
-        return mAlertOnce;
+        return mSoundUri;
     }
 
-    public void setAlertOnce(boolean alertOnce)
+    public void setSoundUri(Uri uri)
     {
-        mAlertOnce = alertOnce;
-    }
-
-    public String getSoundPref()
-    {
-        return mSoundPreference;
+        mSoundUri = uri;
     }
 
     public void setVibratePattern(long[] pattern)

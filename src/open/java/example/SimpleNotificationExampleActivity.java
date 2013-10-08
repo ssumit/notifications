@@ -6,7 +6,6 @@ import android.os.Bundle;
 import com.java.R;
 import open.java.notification.AppNotifier;
 import open.java.notification.StorageFactory;
-import open.java.settings.AlertPreference;
 import open.java.notification.content.NotificationContent;
 import open.java.store.IUserPrefStore;
 
@@ -36,7 +35,6 @@ public class SimpleNotificationExampleActivity extends Activity {
         NotificationContent notificationContent = new NotificationContent(mTitle, mBody, mTickerText, R.drawable.accounts_cross);
         notificationContent.setLargeIcon(((BitmapDrawable) getResources().getDrawable(R.drawable.accounts_cross)).getBitmap());
         IUserPrefStore userPrefStore = new StorageFactory().getUserPrefStore();
-        notificationContent.setAlertPreference(new AlertPreference(userPrefStore.getSoundPreference(), userPrefStore.getVibratePreference()));
         AppNotifier appNotifier = new AppNotifier(getApplicationContext());
         appNotifier.generateNotification(notificationContent);
     }

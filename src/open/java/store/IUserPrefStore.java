@@ -1,8 +1,10 @@
 package open.java.store;
 
+import android.net.Uri;
+
 public interface IUserPrefStore
 {
-    public String getSoundPreference();
+    public Uri getSoundUri();
 
-    public String getVibratePreference();
+    public Uri getSilentSoundUri();
 }
