@@ -1,4 +1,7 @@
-package open.java.notification.store;
+package open.java.settings;
+
+import open.java.store.INotificationStore;
+import open.java.store.IUserPrefStore;
 
 public class UserPrefStore implements IUserPrefStore
 {

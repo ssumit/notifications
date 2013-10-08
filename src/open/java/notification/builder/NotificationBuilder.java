@@ -5,7 +5,12 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
-import open.java.notification.content.*;
+import open.java.notification.content.NotificationAction;
+import open.java.notification.content.NotificationContent;
+import open.java.notification.content.NotificationStyle;
+import open.java.notification.content.StyleProcessor;
+import open.java.settings.AlertPreference;
+import open.java.settings.LightPreference;
 
 public class NotificationBuilder
 {
@@ -42,7 +47,7 @@ public class NotificationBuilder
         {
             setContentIntent();
         }
-        if (mContent.getStyle() != null)
+        if (!mContent.getStyle().equals(NotificationStyle.NORMAL))
         {
             setStyle();
         }
@@ -141,7 +146,8 @@ public class NotificationBuilder
 
     public NotificationBuilder setStyle()
     {
-        new StyleProcessor().setAndGetStyle(mContent);
+        NotificationCompat.Style style = new StyleProcessor().setAndGetStyle(mContent);
+        mBuilder.setStyle(style);
         return this;
     }
 

@@ -1,9 +1,9 @@
 package open.java.notification;
 
-import open.java.notification.store.INotificationStore;
-import open.java.notification.store.IUserPrefStore;
-import open.java.notification.store.NotificationStore;
-import open.java.notification.store.UserPrefStore;
+import open.java.store.INotificationStore;
+import open.java.store.IUserPrefStore;
+import open.java.store.NotificationStore;
+import open.java.settings.UserPrefStore;
 
 public class StorageFactory
 {

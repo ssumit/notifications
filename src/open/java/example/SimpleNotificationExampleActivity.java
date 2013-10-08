@@ -6,9 +6,9 @@ import android.os.Bundle;
 import com.java.R;
 import open.java.notification.AppNotifier;
 import open.java.notification.StorageFactory;
-import open.java.notification.content.AlertPreference;
+import open.java.settings.AlertPreference;
 import open.java.notification.content.NotificationContent;
-import open.java.notification.store.IUserPrefStore;
+import open.java.store.IUserPrefStore;
 
 public class SimpleNotificationExampleActivity extends Activity {
     /**

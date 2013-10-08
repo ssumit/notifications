@@ -1,4 +1,4 @@
-package open.java.notification.content;
+package open.java.settings;
 
 public class LightPreference
 {

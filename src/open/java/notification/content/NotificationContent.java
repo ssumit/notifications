@@ -3,6 +3,7 @@ package open.java.notification.content;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.graphics.Bitmap;
+import open.java.settings.AlertPreference;
 import open.java.util.Utils;
 
 import java.util.UUID;

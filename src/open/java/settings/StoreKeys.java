@@ -1,4 +1,4 @@
-package open.java.notification.store;
+package open.java.settings;
 
 public enum StoreKeys
 {
