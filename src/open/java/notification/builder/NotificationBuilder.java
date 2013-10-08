@@ -55,6 +55,10 @@ public class NotificationBuilder
         {
             setSmallIcon();
         }
+        if (mContent.getDeleteIntent() != null)
+        {
+            setDeleteContent();
+        }
         if (mContent.getFullScreenIntent() != null)
         {
             setFullScreenIntent();

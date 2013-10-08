@@ -22,20 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfce891c-2478-4e1a-b743-5edcdbdd6e28" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/open/java/notification/store/INotificationStore.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/open/java/notification/store/IUserPrefStore.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/open/java/notification/store/NotificationStore.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/open/java/notification/store/StoreKeys.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/open/java/notification/store/UserPrefStore.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/open/java/notification/content/AlertPreference.java" afterPath="$PROJECT_DIR$/src/open/java/settings/AlertPreference.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/open/java/notification/content/LightPreference.java" afterPath="$PROJECT_DIR$/src/open/java/settings/LightPreference.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/open/java/notification/store/StoreKeys.java" afterPath="$PROJECT_DIR$/src/open/java/settings/StoreKeys.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/open/java/notification/store/UserPrefStore.java" afterPath="$PROJECT_DIR$/src/open/java/settings/UserPrefStore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/open/java/example/SimpleNotificationExampleActivity.java" afterPath="$PROJECT_DIR$/src/open/java/example/SimpleNotificationExampleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/open/java/notification/StorageFactory.java" afterPath="$PROJECT_DIR$/src/open/java/notification/StorageFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/open/java/notification/builder/NotificationBuilder.java" afterPath="$PROJECT_DIR$/src/open/java/notification/builder/NotificationBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/open/java/notification/content/NotificationContent.java" afterPath="$PROJECT_DIR$/src/open/java/notification/content/NotificationContent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/open/java/notification/content/StyleProcessor.java" afterPath="$PROJECT_DIR$/src/open/java/notification/content/StyleProcessor.java" />
     </list>
     <ignored path="notifications.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -168,7 +155,7 @@
       <file leaf-file-name="NotificationBuilder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/open/java/notification/builder/NotificationBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="8" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.6795017">
+            <state line="59" column="30" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.8323896">
               <folding />
             </state>
           </provider>
@@ -753,18 +740,18 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32795697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37894738" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32799146" sideWeight="0.67419356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32799146" sideWeight="0.672043" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.672043" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32795697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -953,7 +940,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/open/java/notification/builder/NotificationBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="8" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.6795017">
+        <state line="59" column="30" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.8323896">
           <folding />
         </state>
       </provider>
