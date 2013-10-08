@@ -13,28 +13,18 @@ public class UserPrefStore implements IUserPrefStore
         mNotificationStore = notificationStore;
     }
 
-    public String getSoundPreference()
+    @Override
+    public Uri getSoundUri()
     {
         String customSoundUri = mNotificationStore.get(StoreKeys.NOTIFICATION_SOUND_PREFERENCE_KEY.toString());
         return (customSoundUri == null || customSoundUri.equals("")) ?
-                null : customSoundUri;
+                null : Uri.parse(customSoundUri);
     }
 
-    public String getVibratePreference()
+    @Override
+    public Uri getSilentSoundUri()
     {
-        String vibratePref = mNotificationStore.get(StoreKeys.NOTIFICATION_VIBRATE_PREFERENCE_KEY.toString());
-        return (vibratePref == null || vibratePref.equals("")) ?
-                null : vibratePref;
-    }
-
-    @Override
-    public Uri getSoundUri() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public Uri getSilentSoundUri() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return Uri.parse("SILENT");
     }
 }
 
