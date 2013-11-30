@@ -3,3 +3,15 @@
 out/
 local.properties
 bin/
+*.iws
+*.iml
+workspace.xml
+*.swp
+*.pyc
+*.apk
+*~
+*.log
+*.ser
+*.em
+.settings
+build-log.xml
