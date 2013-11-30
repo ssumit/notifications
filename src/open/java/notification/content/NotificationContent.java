@@ -3,6 +3,7 @@ package open.java.notification.content;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.graphics.Bitmap;
+import android.text.Html;
 import open.java.settings.AlertPreference;
 import open.java.util.Utils;
 
@@ -67,22 +68,22 @@ public class NotificationContent
 
     public String getBody()
     {
-        return mBody;
+        return preProcessHtml(mBody);
     }
 
     public String getTickerText()
     {
-        return mTickerText;
+        return preProcessHtml(mTickerText);
     }
 
     public String getSummaryText()
     {
-        return mSummaryText;
+        return preProcessHtml(mSummaryText);
     }
 
     public String getContentInfo()
     {
-        return mContentInfo;
+        return preProcessHtml(mContentInfo);
     }
 
     public Bitmap getLargeIcon()
@@ -234,5 +235,17 @@ public class NotificationContent
                 break;
         }
         return this;
+    }
+
+    private String preProcessHtml(String text)
+    {
+        if (text == null)
+        {
+            return null;
+        }
+        else
+        {
+            return Html.fromHtml(text).toString();
+        }
     }
 }

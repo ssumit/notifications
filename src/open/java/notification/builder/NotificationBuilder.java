@@ -100,7 +100,7 @@ public class NotificationBuilder
 
     public NotificationBuilder setTickerText()
     {
-        mBuilder.setTicker(mContent.getBody());
+        mBuilder.setTicker(mContent.getTickerText());
         return this;
     }
 
